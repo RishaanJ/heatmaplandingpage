@@ -7,7 +7,7 @@
         <item>
             <title>Version 1.0.0 "Higashikata"</title>
             <pubDate>Sat, 31 May 2026 00:00:00 +0000</pubDate>
-            <sparkle:version>1</sparkle:version>
+            <sparkle:version>2</sparkle:version>
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <enclosure
