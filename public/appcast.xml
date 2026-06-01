@@ -24,7 +24,7 @@
             <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <enclosure
-                url="https://heatmap.rishaan.cc/releases/Heatmap-1.0.1.dmg"
+                url="https://heatmap.rishaan.cc/releases/Heatmap-1.0.2.dmg"
                 sparkle:edSignature="zPNpgOlaK3vo5rY8t4yvYPvn8AVSbnd+HoCGq8JhHIdtao3iwgEzG2rkARLO6L7UTqdQ8aj0R0PnsguICM7hAg=="
                 length="2070458"
                 type="application/octet-stream"
