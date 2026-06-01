@@ -5,6 +5,19 @@
         <link>https://heatmap.rishaan.cc/appcast.xml</link>
         <language>en</language>
         <item>
+            <title>Version 1.1.0 "Higashikata"</title>
+            <pubDate>Sat, 31 May 2026 00:00:00 +0000</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://heatmap.rishaan.cc/releases/Heatmap-1.1.0.dmg"
+                sparkle:edSignature="nFgTEI5pFgPfpvSnnnv+sJ80sTsYQ+9WMKDgzWqPgoqA/rd2GC+qKeYXfJa4kRY4664Bl3sHYiUPPrewswHCCg=="
+                length="2097141"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.0.3 "Higashikata"</title>
             <pubDate>Sat, 31 May 2026 00:00:00 +0000</pubDate>
             <sparkle:version>4</sparkle:version>
