@@ -74,9 +74,8 @@ export default function Home() {
           <BlurFade delay={0.2} inView>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5">
               <a
-                href="https://github.com/RishaanJ/heatmap"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/releases/Heatmap-1.0.0.dmg"
+                download
                 className="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-[var(--green)] text-white dark:text-black font-semibold text-sm hover:opacity-90 active:scale-[0.98] transition-all duration-150 shadow-lg shadow-green-500/20"
               >
                 Download for Mac
@@ -274,9 +273,8 @@ export default function Home() {
               </div>
               <p className="text-neutral-500 dark:text-neutral-400 text-sm mb-8">One-time purchase. No subscription. Ever.</p>
               <a
-                href="https://github.com/RishaanJ/heatmap"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/releases/Heatmap-1.0.0.dmg"
+                download
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[var(--green)] text-white dark:text-black font-semibold text-sm hover:opacity-90 active:scale-[0.98] transition-all duration-150 shadow-lg shadow-green-500/20"
               >
                 Download for Mac
@@ -292,7 +290,7 @@ export default function Home() {
       <footer className="border-t border-neutral-200 dark:border-[#222] px-6 py-8 mt-auto">
         <div className="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-3">
           <span className="text-xs text-neutral-400 dark:text-neutral-600 font-mono">
-            Heatmap · v1.0.0 Higashkita · MIT
+            Heatmap · v1.0.0 "Higashikata" · MIT
           </span>
           <a
             href="https://github.com/RishaanJ/heatmap"
