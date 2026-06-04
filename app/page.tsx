@@ -2,11 +2,10 @@ import Image from "next/image"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { BorderBeam } from "@/components/ui/border-beam"
 import { MagicCard } from "@/components/ui/magic-card"
-import { DotPattern } from "@/components/ui/dot-pattern"
-import { NumberTicker } from "@/components/ui/number-ticker"
 import { GridPattern } from "@/components/ui/grid-pattern"
-import { ThemeToggle } from "./components/ThemeToggle"
-import AppMockup from "./components/AppMockup"
+import { NumberTicker } from "@/components/ui/number-ticker"
+import { HeroVideoDialog } from "@/components/ui/hero-video-dialog"
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 
 export default function Home() {
   return (
@@ -99,20 +98,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── App mockup ── */}
-      <section className="px-6 pb-28">
-        <BlurFade delay={0.3} inView>
-          <div className="max-w-2xl mx-auto relative">
-            <div className="relative rounded-2xl">
-              <AppMockup />
-              <BorderBeam
-                size={120}
-                duration={10}
-                colorFrom="#39d353"
-                colorTo="#006d32"
-                borderWidth={1.5}
-              />
-            </div>
+      {/* ── Product video ── */}
+      <section className="px-6 pb-24">
+        <BlurFade delay={0.28} inView>
+          <div className="max-w-2xl mx-auto relative rounded-2xl">
+            <HeroVideoDialog
+              videoSrc="/product.mp4"
+              className="rounded-2xl shadow-2xl shadow-black/40 dark:shadow-black/70"
+            />
+            <BorderBeam
+              size={140}
+              duration={10}
+              colorFrom="#39d353"
+              colorTo="#006d32"
+              borderWidth={1.5}
+            />
           </div>
         </BlurFade>
       </section>
@@ -174,29 +174,10 @@ export default function Home() {
               </MagicCard>
             </BlurFade>
 
-            {/* Stats view */}
+            {/* Stats view — real UI replica */}
             <BlurFade delay={0.16} inView className="sm:col-span-4">
-              <MagicCard className="h-full rounded-2xl border border-neutral-200 dark:border-[#282828] bg-white dark:bg-[#141414]">
-                <div className="p-7">
-                  <span className="text-[10px] font-mono text-neutral-400 dark:text-neutral-600 uppercase tracking-widest">View 03</span>
-                  <h3 className="text-lg font-semibold mt-3 mb-2 text-neutral-900 dark:text-white">Stats that matter</h3>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-5">
-                    Peak hour, top app, best day, current streak.
-                  </p>
-                  <div className="grid grid-cols-2 gap-2.5">
-                    {[
-                      { label: "Peak hour", value: "2 PM" },
-                      { label: "Streak", value: "12d" },
-                      { label: "Best day", value: "Mon" },
-                      { label: "Top app", value: "Xcode" },
-                    ].map(({ label, value }) => (
-                      <div key={label} className="rounded-xl bg-neutral-50 dark:bg-[#1c1c1c] border border-neutral-100 dark:border-[#282828] p-3">
-                        <p className="text-[10px] text-neutral-400 dark:text-neutral-600 font-mono mb-1">{label}</p>
-                        <p className="text-base font-semibold font-mono text-[var(--green)]">{value}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <MagicCard className="h-full rounded-2xl border border-neutral-200 dark:border-[#282828] bg-white dark:bg-[#141414] overflow-hidden">
+                <StatsViewMockup />
               </MagicCard>
             </BlurFade>
 
@@ -285,6 +266,15 @@ export default function Home() {
           </div>
         </BlurFade>
       </section>
+
+      {/* ── Floating theme toggle ── */}
+      <div className="fixed bottom-5 left-5 z-50">
+        <AnimatedThemeToggler
+          variant="circle"
+          duration={500}
+          className="w-10 h-10 rounded-full bg-white dark:bg-[#1c1c1e] border border-neutral-200 dark:border-white/10 shadow-lg shadow-black/10 dark:shadow-black/40 text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white hover:scale-105 active:scale-95 transition-transform duration-150"
+        />
+      </div>
 
       {/* ── Footer ── */}
       <footer className="border-t border-neutral-200 dark:border-[#222] px-6 py-8 mt-auto">
@@ -464,6 +454,90 @@ function AppsViewMockup() {
           </div>
         ))}
       </div>
+    </div>
+  )
+}
+
+// ── StatsView replica — matches actual SwiftUI StatsView layout ──────────────
+// Section header: 11pt semibold tertiary, padding h:20 t:18 b:6
+// Row: label 13pt secondary + value 13pt medium mono, padding h:20 v:10
+// Divider between sections, opacity 0.15
+function StatsViewMockup() {
+  const sections = [
+    {
+      title: "Today",
+      rows: [
+        { label: "Active time", value: "1h 12m", accent: true },
+        { label: "Peak hour",   value: "2 PM",   accent: false },
+        { label: "Top app",     value: "Arc",     accent: false },
+      ],
+    },
+    {
+      title: "This Week",
+      rows: [
+        { label: "Total active", value: "6h 48m",  accent: false },
+        { label: "Best day",     value: "Tuesday", accent: false },
+        { label: "Streak",       value: "12 days",  accent: true },
+      ],
+    },
+    {
+      title: "All Time",
+      rows: [
+        { label: "Days tracked",  value: "94",     accent: false },
+        { label: "Daily average", value: "43m",    accent: false },
+      ],
+    },
+  ]
+
+  return (
+    <div className="py-2 overflow-hidden">
+      {sections.map((section, si) => (
+        <div key={section.title}>
+          {/* Section header */}
+          <div className="px-5 pt-[18px] pb-[6px]">
+            <span
+              className="font-semibold uppercase tracking-wide"
+              style={{
+                fontSize: "11px",
+                color: "rgba(120,120,130,1)",
+              }}
+            >
+              {section.title}
+            </span>
+          </div>
+          {/* Rows */}
+          {section.rows.map((row) => (
+            <div
+              key={row.label}
+              className="flex items-center justify-between px-5 py-[10px]"
+            >
+              <span
+                className="text-[13px]"
+                style={{ color: "rgba(160,160,170,1)" }}
+              >
+                {row.label}
+              </span>
+              <span
+                className="text-[13px] font-medium tabular-nums"
+                style={{
+                  color: row.accent
+                    ? "var(--green)"
+                    : "rgba(240,240,245,0.9)",
+                }}
+              >
+                {row.value}
+              </span>
+            </div>
+          ))}
+          {/* Divider */}
+          {si < sections.length - 1 && (
+            <div
+              className="mt-1"
+              style={{ height: "1px", background: "rgba(255,255,255,0.1)", marginLeft: "20px", marginRight: "20px" }}
+            />
+          )}
+        </div>
+      ))}
     </div>
   )
 }
