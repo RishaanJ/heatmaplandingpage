@@ -5,6 +5,23 @@
         <link>https://heatmap.rishaan.cc/appcast.xml</link>
         <language>en</language>
         <item>
+            <title>Version 1.2.4 "Higashikata"</title>
+            <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>1.2.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>Patch: fix outbound updates</h2>
+                ...
+            ]]></description>
+            <enclosure
+                url="https://github.com/RishaanJ/heatmaplandingpage/releases/download/v1.2.4/Heatmap-1.2.4.dmg"
+                sparkle:edSignature="Veg8bgcXzhBiKQFn2V6xL2KH6Gay2cLOXQd/niGLU+yKD5gLqxSx2ozjaG7fwTlkug+nMGew2eHjSBU/YXEdDA=="
+                length="2160003"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.2.3 "Higashikata"</title>
             <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
             <sparkle:version>8</sparkle:version>
