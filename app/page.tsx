@@ -50,6 +50,17 @@ export default function Home() {
             </div>
           </BlurFade>
 
+          {/* Version badge */}
+          <BlurFade delay={0.06} inView>
+            <div className="flex justify-center mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono border border-neutral-200 dark:border-white/[0.06] text-neutral-500 dark:text-neutral-500">
+                <span className="text-[var(--green)]">v1.2.5</span>
+                <span className="w-px h-3 bg-neutral-300 dark:bg-white/10" />
+                Themes
+              </span>
+            </div>
+          </BlurFade>
+
           {/* Headline */}
           <BlurFade delay={0.08} inView>
             <h1 className="font-semibold leading-[1.06] tracking-tighter mb-6">
@@ -79,20 +90,12 @@ export default function Home() {
               >
                 Download for Mac
                 <span className="bg-black/15 dark:bg-black/20 rounded-md px-2.5 py-0.5 text-xs font-mono">
-                  $3.99
+                  FREE
                 </span>
-              </a>
-              <a
-                href="https://github.com/RishaanJ/heatmap"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-neutral-200 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-white/[0.04] transition-all duration-150"
-              >
-                View on GitHub
               </a>
             </div>
             <p className="text-xs text-neutral-400 dark:text-neutral-600 font-mono">
-              macOS 13 Ventura or later · One-time purchase, no subscription
+              macOS 14 Sonoma or later
             </p>
           </BlurFade>
         </div>
@@ -235,7 +238,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Pricing / CTA ── */}
+      {/* ── Pricing / CTA ── 
       <section className="px-6 pb-28">
         <BlurFade delay={0} inView>
           <div className="max-w-xl mx-auto text-center">
@@ -266,6 +269,7 @@ export default function Home() {
           </div>
         </BlurFade>
       </section>
+      */}
 
       {/* ── Floating theme toggle ── */}
       <div className="fixed bottom-5 left-5 z-50">
@@ -280,16 +284,18 @@ export default function Home() {
       <footer className="border-t border-neutral-200 dark:border-[#222] px-6 py-8 mt-auto">
         <div className="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-3">
           <span className="text-xs text-neutral-400 dark:text-neutral-600 font-mono">
-            Heatmap · v1.0.0 "Higashikata" · MIT
+            Heatmap · v1.2.5 "Higashikata"
           </span>
-          <a
-            href="https://github.com/RishaanJ/heatmap"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors font-mono"
-          >
-            GitHub ↗
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://rishaan.cc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors font-mono"
+            >
+              rishaan.cc ↗
+            </a>
+          </div>
         </div>
       </footer>
     </main>
