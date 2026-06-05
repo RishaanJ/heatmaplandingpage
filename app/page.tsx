@@ -73,7 +73,7 @@ export default function Home() {
           <BlurFade delay={0.2} inView>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5">
               <a
-                href="https://github.com/RishaanJ/heatmaplandingpage/releases/download/v1.2.4/Heatmap-1.2.4.dmg"
+                href="https://github.com/RishaanJ/heatmaplandingpage/releases/download/v1.2.5/Heatmap-1.2.5.dmg"
                 download
                 className="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-[var(--green)] text-white dark:text-black font-semibold text-sm hover:opacity-90 active:scale-[0.98] transition-all duration-150 shadow-lg shadow-green-500/20"
               >
@@ -254,7 +254,7 @@ export default function Home() {
               </div>
               <p className="text-neutral-500 dark:text-neutral-400 text-sm mb-8">One-time purchase. No subscription. Ever.</p>
               <a
-                href="https://github.com/RishaanJ/heatmaplandingpage/releases/download/v1.2.4/Heatmap-1.2.4.dmg"
+                href="https://github.com/RishaanJ/heatmaplandingpage/releases/download/v1.2.5/Heatmap-1.2.5.dmg"
                 download
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[var(--green)] text-white dark:text-black font-semibold text-sm hover:opacity-90 active:scale-[0.98] transition-all duration-150 shadow-lg shadow-green-500/20"
               >
