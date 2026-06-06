@@ -84,7 +84,7 @@ export default function Home() {
           <BlurFade delay={0.2} inView>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5">
               <a
-                href="https://github.com/RishaanJ/heatmaplandingpage/releases/download/v1.2.5/Heatmap-1.2.5.dmg"
+                href="https://github.com/RishaanJ/heatmaplandingpage/releases/download/v1.2.6/Heatmap-1.2.6.dmg"
                 download
                 className="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-[var(--green)] text-white dark:text-black font-semibold text-sm hover:opacity-90 active:scale-[0.98] transition-all duration-150 shadow-lg shadow-green-500/20"
               >
@@ -287,6 +287,18 @@ export default function Home() {
             Heatmap · v1.2.5 "Higashikata"
           </span>
           <div className="flex items-center gap-4">
+            <a
+              href="/privacy"
+              className="text-xs text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors font-mono"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/terms"
+              className="text-xs text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors font-mono"
+            >
+              Terms
+            </a>
             <a
               href="https://rishaan.cc"
               target="_blank"
